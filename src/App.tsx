@@ -50,6 +50,7 @@ const copy = {
       title: '扫码入口',
       description: '正式二维码确认后将在这里更新。',
       pending: '二维码待更新',
+      registrationAction: '点击报名',
       groupRequirement: '参赛选手必须加入赛事交流群，否则将影响奖金发放。',
       note: '请以赛事官方发布为准',
       slots: [
@@ -284,6 +285,7 @@ const copy = {
       title: 'Scan to join',
       description: 'Official QR codes will be added here once confirmed.',
       pending: 'QR coming soon',
+      registrationAction: 'Register now',
       groupRequirement: 'All participants must join the event group, or prize payment will be affected.',
       note: 'Please follow official event announcements',
       slots: [
@@ -633,7 +635,7 @@ export default function Home() {
           <p>{t.qrFloat.description}</p>
         </div>
         <div className="registration-qr-grid">
-          {t.qrFloat.slots.map(([label, description, image, href]) => (
+          {t.qrFloat.slots.map(([label, description, image, href], index) => (
             <article className="registration-qr-item" key={label}>
               {image && href ? (
                 <a
@@ -656,8 +658,21 @@ export default function Home() {
                   <span>{t.qrFloat.pending}</span>
                 </div>
               )}
-              <strong>{label}</strong>
-              <small>{description}</small>
+              <div className="registration-qr-copy">
+                <strong>{label}</strong>
+                <small>{description}</small>
+                {index === 0 && href ? (
+                  <a
+                    className="registration-action"
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.qrFloat.registrationAction}
+                    <ArrowUpRight aria-hidden="true" />
+                  </a>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>
