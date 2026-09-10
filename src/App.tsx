@@ -64,7 +64,7 @@ const copy = {
           '赛事群',
           '扫码或点击加入 · 关联奖金发放',
           '/wechat-event-group-qr.png',
-          'https://c.weixin.com/g/c7WOxhkOfLYqPCzr',
+          'https://work.weixin.qq.com/gm/5b6b92c8677d0555f3fb6a3f1a081399',
         ],
         [
           '赛事小助手',
@@ -305,7 +305,7 @@ const copy = {
           'Event group',
           'Scan or tap to join · required for prize payment',
           '/wechat-event-group-qr.png',
-          'https://c.weixin.com/g/c7WOxhkOfLYqPCzr',
+          'https://work.weixin.qq.com/gm/5b6b92c8677d0555f3fb6a3f1a081399',
         ],
         [
           'Event assistant',
