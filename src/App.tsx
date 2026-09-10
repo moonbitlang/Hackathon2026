@@ -157,7 +157,7 @@ const copy = {
       ],
       quarterlyLabel: '季度优秀项目',
       quarterlyPoolLabel: '季度奖金池',
-      quarterlyPool: '最高 63,000 元',
+      quarterlyPool: '总计 80000 元',
       quarterly: [
         ['一等奖', '12,000 元', '1–2 名'],
         ['二等奖', '6,000 元', '3–4 名'],
@@ -399,7 +399,7 @@ const copy = {
       ],
       quarterlyLabel: 'Quarterly excellence awards',
       quarterlyPoolLabel: 'Quarterly prize pool',
-      quarterlyPool: 'Up to RMB 63,000',
+      quarterlyPool: 'Total RMB 80,000',
       quarterly: [
         ['First prize', 'RMB 12,000', '1–2 projects'],
         ['Second prize', 'RMB 6,000', '3–4 projects'],
