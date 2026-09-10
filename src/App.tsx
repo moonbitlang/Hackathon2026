@@ -66,6 +66,12 @@ const copy = {
           '/wechat-event-group-qr.png',
           'https://c.weixin.com/g/c7WOxhkOfLYqPCzr',
         ],
+        [
+          '赛事小助手',
+          '赛事群无法进入等所有赛事问题，请联系小助手。',
+          '/wechat-event-assistant-qr.png',
+          'https://u.wechat.com/EA2rUlkjobqjS4EeOCKuKdY',
+        ],
       ],
     },
     process: {
@@ -300,6 +306,12 @@ const copy = {
           'Scan or tap to join · required for prize payment',
           '/wechat-event-group-qr.png',
           'https://c.weixin.com/g/c7WOxhkOfLYqPCzr',
+        ],
+        [
+          'Event assistant',
+          'For group access issues or any event questions, please contact the event assistant.',
+          '/wechat-event-assistant-qr.png',
+          'https://u.wechat.com/EA2rUlkjobqjS4EeOCKuKdY',
         ],
       ],
     },
