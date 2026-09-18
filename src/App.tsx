@@ -136,7 +136,11 @@ const copy = {
       stackingValue: '单人最高可获约 7.5 万元',
       stackingNote: '奖金分别评定，互不冲突，具体详情以正式章程为准。',
       cyclesLabel: '奖励评选周期',
-      calendarSummary: '赛事年度从 8 月开始，至次年 7 月结束。当前为第一赛季度（8—10 月），正在进行九月赛。',
+      calendarTitle: '赛事年历',
+      calendarSummary: '8 月开始 · 次年 7 月结束',
+      currentLabel: '当前赛季度',
+      currentBadge: '进行中 · 九月赛',
+      monthlyTiming: '每月一期 · 本期九月赛 · 9 月 24 日截止报名与验收',
       cycleDates: [
         [['月度周期', '每月一期'], ['当前赛期', '九月赛 · 9 月 24 日截止报名与验收']],
         [['第一赛季度', '8—10 月'], ['第二赛季度', '11 月—次年 1 月'], ['第三赛季度', '2—4 月'], ['第四赛季度', '5—7 月']],
@@ -396,7 +400,11 @@ const copy = {
       stackingValue: 'Up to approx. RMB 75,000 per person',
       stackingNote: 'Awards are assessed separately. See the official charter for details.',
       cyclesLabel: 'Award cycles',
-      calendarSummary: 'The competition year runs from August through July of the following year. The current round is September, in the first competition quarter (August–October).',
+      calendarTitle: 'Competition calendar',
+      calendarSummary: 'August to July of the following year',
+      currentLabel: 'Current quarter',
+      currentBadge: 'In progress · September',
+      monthlyTiming: 'One round each month · September round · Registration and submission close Sep 24',
       cycleDates: [
         [['Monthly cycle', 'One round each month'], ['Current round', 'September · Registration and submission close Sep 24']],
         [['First quarter', 'Aug–Oct'], ['Second quarter', 'Nov–Jan of the following year'], ['Third quarter', 'Feb–Apr'], ['Fourth quarter', 'May–Jul']],
@@ -809,25 +817,44 @@ export default function Home() {
           </div>
 
           <div className="award-cycles" aria-label={t.awards.cyclesLabel}>
-            <h3>{t.awards.cyclesLabel}</h3>
-            <p className="award-calendar-summary">{t.awards.calendarSummary}</p>
+            <div className="award-cycles-heading">
+              <h3>{t.awards.cyclesLabel}</h3>
+              <span className="calendar-current-badge"><i aria-hidden="true" />{t.awards.currentBadge}</span>
+            </div>
             <div className="award-cycle-grid">
-              {t.awards.cycles.map(([period, label, value, note], index) => (
+              {t.awards.cycles.map(([period, label, value, note]) => (
                 <article key={period}>
-                  <span className="award-cycle-period">{period}</span>
                   <h4>{label}</h4>
                   <strong>{value}</strong>
                   <p>{note}</p>
-                  <dl className="award-cycle-dates">
-                    {t.awards.cycleDates[index].map(([cycle, dates]) => (
-                      <div key={cycle}>
-                        <dt>{cycle}</dt>
-                        <dd>{dates}</dd>
-                      </div>
-                    ))}
-                  </dl>
                 </article>
               ))}
+            </div>
+            <div className="competition-calendar">
+              <div className="calendar-heading">
+                <h4><CalendarDays aria-hidden="true" />{t.awards.calendarTitle}</h4>
+                <p>{t.awards.calendarSummary}</p>
+              </div>
+              <ol className="calendar-quarters">
+                {t.awards.cycleDates[1].map(([cycle, dates], index) => (
+                  <li className={index === 0 ? 'is-current' : ''} key={cycle} aria-current={index === 0 ? 'step' : undefined}>
+                    <div className="calendar-quarter-top"><span>{cycle}</span><span className="calendar-quarter-number" aria-hidden="true">0{index + 1}</span></div>
+                    <strong>{dates}</strong>
+                    <span className="calendar-quarter-marker" aria-hidden="true" />
+                    {index === 0 && <span className="sr-only">{t.awards.currentLabel}</span>}
+                  </li>
+                ))}
+              </ol>
+              <div className="calendar-halves">
+                {t.awards.cycleDates[2].map(([cycle, dates]) => (
+                  <div key={cycle}><span>{cycle}</span><strong>{dates}</strong></div>
+                ))}
+              </div>
+              <div className="calendar-year">
+                <span>{t.awards.cycleDates[3][0][0]}</span>
+                <strong>{t.awards.cycleDates[3][0][1]}</strong>
+              </div>
+              <p className="calendar-monthly-note">{t.awards.monthlyTiming}</p>
             </div>
             <p className="award-cycle-note">{t.awards.stackingNote}</p>
           </div>

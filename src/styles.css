@@ -1428,67 +1428,123 @@ section {
 .award-cycles {
   margin-bottom: 22px;
   padding: 26px;
-  border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--border));
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, var(--border));
   border-radius: var(--radius-xl);
   background: var(--panel);
 }
 
-.award-cycles h3 { margin: 0 0 22px; font-size: 18px; }
-
-.award-calendar-summary {
-  margin: -8px 0 24px;
-  padding: 12px 14px;
-  border-radius: 10px;
-  color: var(--text);
-  background: var(--primary-soft);
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.award-cycle-dates {
-  display: grid;
+.award-cycles-heading,
+.calendar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
-  margin: 18px 0 0;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  font-size: 12px;
-  line-height: 1.6;
 }
 
-.award-cycle-dates dt { color: var(--text); font-weight: 700; }
-.award-cycle-dates dd { margin: 2px 0 0; color: var(--text-soft); }
+.award-cycles h3 { margin: 0; font-size: 18px; }
+.calendar-current-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 99px;
+  color: var(--primary);
+  background: var(--primary-soft);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.calendar-current-badge i { width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: currentColor; }
 
 .award-cycle-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: 10px;
+  margin-top: 22px;
 }
-
-.award-cycle-grid article { min-width: 0; }
-
-.award-cycle-period {
-  display: block;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--primary);
-  color: var(--primary);
-  font-size: 14px;
-  font-weight: 800;
+.award-cycle-grid article {
+  min-width: 0;
+  padding: 18px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel-strong);
 }
+.award-cycle-grid h4 { margin: 0 0 10px; color: var(--text-soft); font-size: 12px; font-weight: 600; }
+.award-cycle-grid strong { color: var(--primary); font-size: clamp(20px, 2vw, 28px); line-height: 1.4; letter-spacing: -.025em; }
+.award-cycle-grid p { margin: 5px 0 0; color: var(--text-soft); font-size: 11px; line-height: 1.6; }
 
-.award-cycle-grid h4 { margin: 18px 0 10px; font-size: 13px; }
-.award-cycle-grid strong { color: var(--primary); font-size: clamp(20px, 2.1vw, 30px); line-height: 1.4; }
-.award-cycle-grid p,
-.award-cycle-note { color: var(--text-soft); font-size: 12px; line-height: 1.7; }
-.award-cycle-grid p { margin: 8px 0 0; }
-.award-cycle-note { margin: 22px 0 0; }
+.competition-calendar { margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--border); }
+.calendar-heading h4 { display: flex; align-items: center; gap: 7px; margin: 0; font-size: 14px; }
+.calendar-heading svg { width: 16px; height: 16px; color: var(--text-soft); }
+.calendar-heading p { margin: 0; color: var(--text-soft); font-size: 11px; line-height: 1.6; }
+.calendar-quarters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+.calendar-quarters li {
+  position: relative;
+  min-width: 0;
+  padding: 13px 14px 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px 12px 0 0;
+  background: color-mix(in srgb, var(--panel-strong) 65%, transparent);
+}
+.calendar-quarters li::after {
+  position: absolute;
+  right: -11px;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  content: '';
+  background: color-mix(in srgb, var(--primary) 24%, var(--border));
+}
+.calendar-quarters li:last-child::after { right: 0; }
+.calendar-quarter-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; color: var(--text-soft); font-size: 12px; }
+.calendar-quarter-number { font-family: var(--font-geist-mono); font-size: 10px; opacity: .55; }
+.calendar-quarters strong { display: block; margin-top: 10px; font-size: clamp(13px, 1.4vw, 17px); line-height: 1.5; }
+.calendar-quarter-marker { position: absolute; z-index: 1; bottom: -3px; left: 14px; width: 8px; height: 8px; border-radius: 50%; background: color-mix(in srgb, var(--primary) 35%, var(--panel-strong)); }
+.calendar-quarters .is-current { border-color: color-mix(in srgb, var(--primary) 35%, var(--border)); background: var(--primary-soft); }
+.calendar-quarters .is-current .calendar-quarter-top,
+.calendar-quarters .is-current strong { color: var(--primary); }
+.calendar-quarters .is-current::after,
+.calendar-quarters .is-current .calendar-quarter-marker { background: var(--primary); }
+.calendar-halves { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.calendar-halves > div,
+.calendar-year { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.6; }
+.calendar-halves > div { background: color-mix(in srgb, var(--primary-strong) 8%, var(--panel)); border: 1px solid color-mix(in srgb, var(--primary-strong) 15%, var(--border)); }
+.calendar-halves span,
+.calendar-year span { color: var(--text-soft); }
+.calendar-halves strong,
+.calendar-year strong { font-weight: 600; }
+.calendar-year { margin-top: 8px; background: color-mix(in srgb, var(--text-soft) 7%, var(--panel)); border: 1px solid var(--border); }
+.calendar-monthly-note { margin: 12px 0 0; color: var(--text-soft); font-size: 11px; line-height: 1.7; }
+.award-cycle-note { margin: 18px 0 0; color: var(--text-soft); font-size: 11px; line-height: 1.7; }
 
 @media (max-width: 760px) {
   .hero-partner { margin-bottom: 12px; font-size: 16px; }
   .hero-award-highlight { padding: 18px; }
   .hero-award-highlight span { font-size: 12px; }
-  .award-cycles { padding: 20px; }
-  .award-cycle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
-  .award-cycle-grid strong { font-size: 21px; }
+  .award-cycles { padding: 18px; }
+  .award-cycles-heading { flex-wrap: wrap; }
+  .award-cycles h3 { font-size: 17px; }
+  .award-cycle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+  .award-cycle-grid article { padding: 13px 10px; }
+  .award-cycle-grid strong { font-size: clamp(17px, 5vw, 21px); }
+  .award-cycle-grid h4 { font-size: 11px; }
+  .award-cycle-grid p { font-size: 10px; }
+  .calendar-heading { flex-wrap: wrap; gap: 6px; }
+  .calendar-quarters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 8px; margin-top: 14px; }
+  .calendar-quarters li { padding: 11px 10px 20px; }
+  .calendar-quarters li:nth-child(2)::after { right: 0; }
+  .calendar-quarters strong { font-size: 13px; }
+  .calendar-quarter-top { font-size: 11px; }
+  .calendar-halves { gap: 8px; }
+  .calendar-halves > div { flex-direction: column; align-items: flex-start; gap: 2px; padding: 9px 10px; font-size: 11px; }
+  .calendar-year { padding: 9px 10px; font-size: 11px; }
 }
 
 .monthly-award,
