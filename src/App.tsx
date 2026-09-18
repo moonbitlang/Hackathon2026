@@ -26,21 +26,22 @@ const withBasePath = (path: string) =>
 const copy = {
   zh: {
     brand: '黑客松',
-    heroTitle: '九月黑客松',
+    heroTitle: '黑客松',
     nav: [
       ['参赛流程', '#process'],
       ['奖励机制', '#awards'],
       ['方向与验收', '#directions'],
       ['赛事组织', '#organization'],
     ],
-    eventTag: 'MOONBIT × AI PROGRAMMING',
-    titleTop: '用 MoonBit 让 AI 写的更顺畅，',
-    titleBottom: '也让软件经得起检验。',
+    eventTag: '2026 · 线上开源赛事',
+    titleTop: '用 MoonBit 与 AI，',
+    titleBottom: '把真实需求做成开源软件。',
     description:
       '面向所有开发者的线上开源黑客松。使用 MoonBit 与 AI 编程工具，把一个真实需求做成可运行、可测试、可维护的软件项目。',
     primaryAction: '查看参赛方式',
     secondaryAction: '查看赛事章程',
     periodLabel: '本期赛程',
+    currentRound: '当前赛期：九月赛',
     period: '9 月第一周 — 9 月 24 日',
     panelTitle: '这不是提示词比赛',
     panelBody:
@@ -48,7 +49,7 @@ const copy = {
     qrFloat: {
       eyebrow: '报名与交流群',
       title: '扫码入口',
-      description: '正式二维码确认后将在这里更新。',
+      description: '支持新项目与已有项目实质新增。',
       pending: '二维码待更新',
       registrationAction: '点击报名',
       groupRequirement: '参赛选手必须加入赛事交流群，否则将影响奖金发放。',
@@ -109,7 +110,7 @@ const copy = {
           [
             '03',
             '统一评选与奖励',
-            '两类项目按季度统一评选。月度启动与完成支持按月度验收发放，季度奖金另行评定，两者互不冲突。',
+            '两类项目按季度统一评选。月度启动支持在申报审核通过后发放，完成支持在开发完成并通过本期审核后发放；季度、半年度和年度奖金分别评定，可叠加获得。',
           ],
         ],
         note: '具体评选时间、形式及结果发布安排，以赛事官方通知为准。',
@@ -120,21 +121,31 @@ const copy = {
       title: '从基础软件出发，解决一个真实问题。',
       description: '以下方向用于启发选题，不构成限制。原创项目与成熟生态库的 MoonBit 移植均可参与。',
       items: [
-        ['语言与开发工具', '解释器、运行时、LSP、CLI 与开发体验工具。'],
-        ['Web 与网络基础设施', '协议库、Web 服务器、代理、服务端基础组件。'],
-        ['数据与分布式系统', '数据处理、数据库、并发框架与系统仿真。'],
-        ['应用与内容工具', '前端、API、音频、图形与通用内容处理组件。'],
+        ['工具库', '通用工具库、协议库与可复用的基础组件。'],
+        ['数据处理', '数据处理、数据库、分析与内容处理工具。'],
+        ['AI 应用', '结合 AI 能力，解决真实需求的开源应用。'],
+        ['开发者工具', '解释器、运行时、LSP、CLI 与开发体验工具。'],
       ],
       note: '不确定选题是否合适？优先选择边界清晰、能够在一个月内交付并验证的项目。',
     },
     awards: {
       eyebrow: '奖励机制',
-      title: '月度持续支持，季度奖励优秀作品。',
-      description: '月度支持、推荐奖励与季度奖金分别评定，最终资格与发放方式以正式章程为准。',
+      title: '月度项目支持，多周期奖金可叠加。',
+      description: '季度、半年度和年度奖金可叠加获得，单人最高可获约 7.5 万元。奖金分别评定，互不冲突，具体详情以正式章程为准。',
+      stackingTitle: '季度、半年度和年度奖金可叠加获得',
+      stackingValue: '单人最高可获约 7.5 万元',
+      stackingNote: '奖金分别评定，互不冲突，具体详情以正式章程为准。',
+      cyclesLabel: '奖励评选周期',
+      cycles: [
+        ['月度', '月度项目支持', '150 + 350 元', '启动支持 + 完成支持'],
+        ['季度', '季度一等奖', '12,000 元', '季度奖金'],
+        ['半年度', '半年度一等奖', '24,000 元', '半年度奖金'],
+        ['年度', '年度一等奖', '36,000 元', '年度奖金'],
+      ],
       monthlyLabel: '月度项目支持',
       monthlyItems: [
-        ['150 元', '启动支持', '项目申报审核通过后统一发放，名额不限'],
-        ['350 元', '完成支持', '完成开发并通过本期项目审核后统一发放'],
+        ['150 元', '启动支持', '申报审核通过后发放启动支持'],
+        ['350 元', '完成支持', '开发完成并通过本期审核后发放完成支持'],
       ],
       referralLabel: '推荐奖励',
       referralValue: '50 元 / 人',
@@ -163,7 +174,7 @@ const copy = {
         ['二等奖', '6,000 元', '3–4 名'],
         ['三等奖', '3,000 元', '5 名'],
       ],
-      extra: '季度赛事结束后统一发放；获奖项目可获得荣誉证书与实习直通车机会。如无优秀作品，一、二、三等奖名额均可空缺。半年度评选已有计划，具体安排另行通知。',
+      extra: '季度赛事结束后统一发放；获奖项目可获得荣誉证书与实习直通车机会。如无优秀作品，一、二、三等奖名额均可空缺。季度、半年度和年度奖金可叠加获得；具体评选安排以正式章程和官方通知为准。',
     },
     requirements: {
       eyebrow: '验收标准',
@@ -190,7 +201,7 @@ const copy = {
         '验收项目需以 MoonBit 为主要实现语言，并提供清晰 README、可运行示例与必要测试。',
         '原创、移植或已有项目均可参与；已有项目须包含本期实质新增工作，移植项目须说明来源与许可证。',
         '参赛选手必须加入赛事交流群，否则将影响奖金发放。',
-        '月度支持为 150 元启动支持与 350 元完成支持；季度奖金另行评定，两者互不冲突。',
+        '月度支持为 150 元启动支持与 350 元完成支持；季度、半年度和年度奖金分别评定，可叠加获得，单人最高可获约 7.5 万元。',
       ],
       action: '项目申报',
     },
@@ -257,7 +268,8 @@ const copy = {
         ['可以使用 AI 写代码吗？', '可以。AI 可参与代码生成、接口设计、测试和文档，但参赛者必须能够解释技术选择并对最终质量负责。'],
         ['可以提交已有项目吗？', '可以，但验收只计算本期新增的实质工作；重复、拆分或简单修改不符合要求。'],
         ['项目必须做得很大吗？', '不必。比起堆叠功能，我们更看重清晰边界、可靠测试、完整文档和真实可用性。'],
-        ['报名入口在哪里？', '报名表单和赛事工具包正在整理，开放后会在本页首屏同步更新。'],
+        ['奖金可以叠加获得吗？', '可以。季度、半年度和年度奖金分别评定，可叠加获得，单人最高可获约 7.5 万元。季度一等奖 12,000 元、半年度一等奖 24,000 元、年度一等奖 36,000 元，具体详情以正式章程为准。'],
+        ['报名入口在哪里？', '点击页面中的「点击报名」或扫描飞书报名二维码，提交项目与参赛信息。参赛选手必须加入赛事交流群，否则将影响奖金发放。'],
       ],
     },
     footer: 'MoonBit 黑客松',
@@ -267,21 +279,22 @@ const copy = {
   },
   en: {
     brand: 'Hackathon',
-    heroTitle: 'September Hackathon',
+    heroTitle: 'Hackathon',
     nav: [
       ['Process', '#process'],
       ['Awards', '#awards'],
       ['Directions & acceptance', '#directions'],
       ['Organization', '#organization'],
     ],
-    eventTag: 'MOONBIT × AI PROGRAMMING',
-    titleTop: 'Use MoonBit to make AI coding smoother, ',
-    titleBottom: 'and build software that holds up.',
+    eventTag: '2026 · ONLINE OPEN SOURCE HACKATHON',
+    titleTop: 'Use MoonBit and AI to ',
+    titleBottom: 'turn real needs into open-source software.',
     description:
       'An online open-source hackathon for every developer. Use MoonBit and AI programming tools to turn a real need into usable, tested, maintainable software.',
     primaryAction: 'How to participate',
     secondaryAction: 'Event charter',
     periodLabel: 'September round',
+    currentRound: 'Current round: September',
     period: 'First week of Sep — Sep 24',
     panelTitle: 'Not a prompting contest',
     panelBody:
@@ -289,7 +302,7 @@ const copy = {
     qrFloat: {
       eyebrow: 'REGISTRATION & COMMUNITY',
       title: 'Scan to join',
-      description: 'Official QR codes will be added here once confirmed.',
+      description: 'New projects and substantial additions to existing projects are welcome.',
       pending: 'QR coming soon',
       registrationAction: 'Register now',
       groupRequirement: 'All participants must join the event group, or prize payment will be affected.',
@@ -350,7 +363,7 @@ const copy = {
           [
             '03',
             'Review and rewards',
-            'Both routes are reviewed together each quarter. Monthly kickoff and completion support is separate from quarterly awards, so the two do not conflict.',
+            'Both routes are reviewed together each quarter. Monthly kickoff support follows application approval; completion support follows development and acceptance. Quarterly, half-year, and annual prizes are assessed separately and can be combined.',
           ],
         ],
         note: 'The exact review date, format, and result-announcement plan will follow official event notices.',
@@ -361,20 +374,30 @@ const copy = {
       title: 'Start with infrastructure. Solve a real problem.',
       description: 'These directions are prompts, not limits. Both original work and MoonBit ports of mature ecosystem libraries are welcome.',
       items: [
-        ['Languages & developer tools', 'Interpreters, runtimes, LSPs, CLIs, and developer experience.'],
-        ['Web & networking', 'Protocol libraries, web servers, proxies, and backend foundations.'],
-        ['Data & distributed systems', 'Data processing, databases, concurrency, and system simulation.'],
-        ['Application & content tooling', 'Frontend, API, audio, graphics, and reusable content tools.'],
+        ['Libraries', 'Utility libraries, protocol libraries, and reusable foundations.'],
+        ['Data processing', 'Data processing, databases, analytics, and content tools.'],
+        ['AI applications', 'Open-source applications that use AI to solve real needs.'],
+        ['Developer tools', 'Interpreters, runtimes, LSPs, CLIs, and developer experience.'],
       ],
       note: 'Unsure about your topic? Prefer a clear scope that can be built and verified within one month.',
     },
     awards: {
       eyebrow: 'AWARDS',
-      title: 'Monthly support. Quarterly awards for excellent work.',
-      description: 'Monthly support, referral rewards, and quarterly prizes are reviewed separately. Final eligibility and payment details follow the official rules.',
+      title: 'Monthly support. Awards across multiple cycles.',
+      description: 'Quarterly, half-year, and annual prizes can be combined, with up to approximately RMB 75,000 per person. Awards are assessed separately; see the official charter for details.',
+      stackingTitle: 'Quarterly, half-year, and annual prizes can be combined',
+      stackingValue: 'Up to approx. RMB 75,000 per person',
+      stackingNote: 'Awards are assessed separately. See the official charter for details.',
+      cyclesLabel: 'Award cycles',
+      cycles: [
+        ['Monthly', 'Monthly project support', 'RMB 150 + 350', 'Kickoff + completion support'],
+        ['Quarterly', 'Quarterly first prize', 'RMB 12,000', 'Quarterly awards'],
+        ['Half-year', 'Half-year first prize', 'RMB 24,000', 'Half-year awards'],
+        ['Annual', 'Annual first prize', 'RMB 36,000', 'Annual awards'],
+      ],
       monthlyLabel: 'Monthly project support',
       monthlyItems: [
-        ['RMB 150', 'Kickoff support', 'Issued after proposal approval, with no fixed quota'],
+        ['RMB 150', 'Kickoff support', 'Issued after the project application is approved'],
         ['RMB 350', 'Completion support', 'Issued after development is completed and the project passes review'],
       ],
       referralLabel: 'Referral reward',
@@ -405,7 +428,7 @@ const copy = {
         ['Second prize', 'RMB 6,000', '3–4 projects'],
         ['Third prize', 'RMB 3,000', '5 projects'],
       ],
-      extra: 'Quarterly prizes are issued after the quarter ends. Winners may receive certificates and fast-track internship opportunities. Any prize tier may remain unfilled if no work meets the bar. A half-year selection is planned; details will be announced separately.',
+      extra: 'Quarterly prizes are issued after the quarter ends. Winners may receive certificates and fast-track internship opportunities. Any prize tier may remain unfilled if no work meets the bar. Quarterly, half-year, and annual prizes can be combined. Review arrangements follow the official charter and announcements.',
     },
     requirements: {
       eyebrow: 'ACCEPTANCE',
@@ -432,7 +455,7 @@ const copy = {
         'MoonBit must be the primary implementation language. Include a clear README, runnable examples, and essential tests.',
         'Original, ported, and existing projects are welcome. Existing projects need substantial new work; ports must disclose their source and license.',
         'All participants must join the event group, or prize payment will be affected.',
-        'Monthly support includes RMB 150 for kickoff and RMB 350 for completion. Quarterly prizes are reviewed separately and do not conflict.',
+        'Monthly support includes RMB 150 for kickoff and RMB 350 for completion. Quarterly, half-year, and annual prizes are assessed separately and can be combined, with up to approximately RMB 75,000 per person.',
       ],
       action: 'Apply now',
     },
@@ -499,7 +522,8 @@ const copy = {
         ['Can I use AI to write code?', 'Yes. AI may help with code, APIs, tests, and docs, but participants must explain technical choices and own the final quality.'],
         ['Can I submit an existing project?', 'Yes, but only substantial work completed during this round counts. Duplicates, split entries, and superficial edits do not qualify.'],
         ['Does the project need to be large?', 'No. Clear scope, reliable tests, complete docs, and real usefulness matter more than feature count.'],
-        ['Where is the registration form?', 'The form and event toolkit are being prepared. This page will be updated when they open.'],
+        ['Can prizes be combined?', 'Yes. Quarterly, half-year, and annual prizes are assessed separately and can be combined, with up to approximately RMB 75,000 per person. First prizes are RMB 12,000, RMB 24,000, and RMB 36,000 respectively. See the official charter for details.'],
+        ['Where is the registration form?', 'Click Register now or scan the Feishu QR code to submit your project and participant details. All participants must join the event group, or prize payment will be affected.'],
       ],
     },
     footer: 'MoonBit Hackathon',
@@ -551,10 +575,16 @@ export default function Home() {
   };
 
   const t = copy[locale];
+  const isPreview = new URLSearchParams(window.location.search).get('preview') === '1';
   const directionIcons = [CodeXml, Network, PackageOpen, Wrench];
 
   return (
     <main className="challenge-site site--with-qr" data-locale={locale} data-theme={theme}>
+      {isPreview && (
+        <div className="preview-notice" role="status">
+          {locale === 'zh' ? '预览版 · 奖励规则已按新海报更新，待确认后正式上线' : 'Preview · Updated award rules, awaiting approval for launch'}
+        </div>
+      )}
       <header className="site-header">
         <div className="site-shell header-inner">
           <a className="brand" href="#top" aria-label={t.brand}>
@@ -601,11 +631,16 @@ export default function Home() {
         <div className="site-shell">
           <div className="hero-banner">
             <div className="hero-banner-copy">
+              <div className="hero-partner"><span>MoonBit</span><i aria-hidden="true" /><img src={withBasePath('/csdn-logo.png')} alt="CSDN" /></div>
               <span className="hero-kicker">{t.eventTag}</span>
               <h1>
                 <span className="hero-wordmark">MoonBit</span>
                 <strong>{t.heroTitle}</strong>
               </h1>
+              <div className="hero-current-round">
+                <CalendarDays aria-hidden="true" />
+                <span>{t.currentRound}</span>
+              </div>
               <p className="hero-tagline">
                 {t.titleTop}
                 <strong>{t.titleBottom}</strong>
@@ -613,11 +648,15 @@ export default function Home() {
             </div>
           </div>
 
+          <a className="hero-award-highlight" href="#awards">
+            <div><span>{t.awards.stackingTitle}</span><strong>{t.awards.stackingValue}</strong></div>
+            <ArrowUpRight aria-hidden="true" />
+          </a>
           <div className="hero-cta-row">
             <div className="hero-cta-copy">
               <strong>
                 <CalendarDays aria-hidden="true" />
-                {t.period}
+                {t.periodLabel} · {t.period}
               </strong>
               <p>{t.description}</p>
             </div>
@@ -755,6 +794,20 @@ export default function Home() {
             <p>{t.awards.description}</p>
           </div>
 
+          <div className="award-cycles" aria-label={t.awards.cyclesLabel}>
+            <h3>{t.awards.cyclesLabel}</h3>
+            <div className="award-cycle-grid">
+              {t.awards.cycles.map(([period, label, value, note]) => (
+                <article key={period}>
+                  <span className="award-cycle-period">{period}</span>
+                  <h4>{label}</h4>
+                  <strong>{value}</strong>
+                  <p>{note}</p>
+                </article>
+              ))}
+            </div>
+            <p className="award-cycle-note">{t.awards.stackingNote}</p>
+          </div>
           <div className="awards-grid">
             <article className="monthly-award">
               <div className="award-card-head">
@@ -1015,7 +1068,7 @@ export default function Home() {
         <div className="site-shell footer-inner">
           <div>
             <strong>{t.footer}</strong>
-            <p>{t.footerNote}</p>
+            <p>{isPreview ? (locale === 'zh' ? '预览版 · 待确认后正式上线' : 'Preview · Awaiting approval for launch') : t.footerNote}</p>
           </div>
           <a href="#top">
             TOP
