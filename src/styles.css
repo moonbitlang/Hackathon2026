@@ -1435,6 +1435,29 @@ section {
 
 .award-cycles h3 { margin: 0 0 22px; font-size: 18px; }
 
+.award-calendar-summary {
+  margin: -8px 0 24px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: var(--text);
+  background: var(--primary-soft);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.award-cycle-dates {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.award-cycle-dates dt { color: var(--text); font-weight: 700; }
+.award-cycle-dates dd { margin: 2px 0 0; color: var(--text-soft); }
+
 .award-cycle-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

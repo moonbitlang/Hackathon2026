@@ -113,7 +113,7 @@ const copy = {
             '两类项目按季度统一评选。月度启动支持在申报审核通过后发放，完成支持在开发完成并通过本期审核后发放；季度、半年度和年度奖金分别评定，可叠加获得。',
           ],
         ],
-        note: '具体评选时间、形式及结果发布安排，以赛事官方通知为准。',
+        note: '赛季度从 8 月起计算：第一赛季度 8—10 月，第二赛季度 11 月—次年 1 月，第三赛季度 2—4 月，第四赛季度 5—7 月。具体评选时间、形式及结果发布安排，以赛事官方通知为准。',
       },
     },
     directions: {
@@ -136,6 +136,13 @@ const copy = {
       stackingValue: '单人最高可获约 7.5 万元',
       stackingNote: '奖金分别评定，互不冲突，具体详情以正式章程为准。',
       cyclesLabel: '奖励评选周期',
+      calendarSummary: '赛事年度从 8 月开始，至次年 7 月结束。当前为第一赛季度（8—10 月），正在进行九月赛。',
+      cycleDates: [
+        [['月度周期', '每月一期'], ['当前赛期', '九月赛 · 9 月 24 日截止报名与验收']],
+        [['第一赛季度', '8—10 月'], ['第二赛季度', '11 月—次年 1 月'], ['第三赛季度', '2—4 月'], ['第四赛季度', '5—7 月']],
+        [['上半年度', '8 月—次年 1 月'], ['下半年度', '2—7 月']],
+        [['年度周期', '8 月—次年 7 月']],
+      ],
       cycles: [
         ['月度', '月度项目支持', '150 + 350 元', '启动支持 + 完成支持'],
         ['季度', '季度一等奖', '12,000 元', '季度奖金'],
@@ -366,7 +373,7 @@ const copy = {
             'Both routes are reviewed together each quarter. Monthly kickoff support follows application approval; completion support follows development and acceptance. Quarterly, half-year, and annual prizes are assessed separately and can be combined.',
           ],
         ],
-        note: 'The exact review date, format, and result-announcement plan will follow official event notices.',
+        note: 'Competition quarters begin in August: Q1 is August–October; Q2 is November–January of the following year; Q3 is February–April; Q4 is May–July. Exact review dates, formats, and result announcements follow official event notices.',
       },
     },
     directions: {
@@ -389,6 +396,13 @@ const copy = {
       stackingValue: 'Up to approx. RMB 75,000 per person',
       stackingNote: 'Awards are assessed separately. See the official charter for details.',
       cyclesLabel: 'Award cycles',
+      calendarSummary: 'The competition year runs from August through July of the following year. The current round is September, in the first competition quarter (August–October).',
+      cycleDates: [
+        [['Monthly cycle', 'One round each month'], ['Current round', 'September · Registration and submission close Sep 24']],
+        [['First quarter', 'Aug–Oct'], ['Second quarter', 'Nov–Jan of the following year'], ['Third quarter', 'Feb–Apr'], ['Fourth quarter', 'May–Jul']],
+        [['First half', 'Aug–Jan of the following year'], ['Second half', 'Feb–Jul']],
+        [['Annual cycle', 'Aug–Jul of the following year']],
+      ],
       cycles: [
         ['Monthly', 'Monthly project support', 'RMB 150 + 350', 'Kickoff + completion support'],
         ['Quarterly', 'Quarterly first prize', 'RMB 12,000', 'Quarterly awards'],
@@ -796,13 +810,22 @@ export default function Home() {
 
           <div className="award-cycles" aria-label={t.awards.cyclesLabel}>
             <h3>{t.awards.cyclesLabel}</h3>
+            <p className="award-calendar-summary">{t.awards.calendarSummary}</p>
             <div className="award-cycle-grid">
-              {t.awards.cycles.map(([period, label, value, note]) => (
+              {t.awards.cycles.map(([period, label, value, note], index) => (
                 <article key={period}>
                   <span className="award-cycle-period">{period}</span>
                   <h4>{label}</h4>
                   <strong>{value}</strong>
                   <p>{note}</p>
+                  <dl className="award-cycle-dates">
+                    {t.awards.cycleDates[index].map(([cycle, dates]) => (
+                      <div key={cycle}>
+                        <dt>{cycle}</dt>
+                        <dd>{dates}</dd>
+                      </div>
+                    ))}
+                  </dl>
                 </article>
               ))}
             </div>
