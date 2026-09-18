@@ -42,7 +42,7 @@ const copy = {
     secondaryAction: '查看赛事章程',
     periodLabel: '本期赛程',
     currentRound: '当前赛期：九月赛',
-    period: '9 月第一周 — 9 月 24 日',
+    period: '9 月第一周 — 9 月 30 日',
     panelTitle: '这不是提示词比赛',
     panelBody:
       '我们更关注工程边界、测试质量、开源合规和可维护性。AI 可以参与开发，但最终成果必须由参赛者理解并负责。',
@@ -82,8 +82,8 @@ const copy = {
       items: [
         ['01', '报名申报', '报名开放后', '提交参赛信息、公开仓库与一页项目说明。'],
         ['02', '资格审核', '滚动审核', '确认选题、工作范围与参赛信息，通过后进入本期开发。'],
-        ['03', '集中开发', '9 月第一周—24 日', '公开持续提交，保留 Issues、PR 与更新记录。'],
-        ['04', '项目验收', '9 月 24 日（截止报名）', '提交代码、README、测试与可复现的演示说明。'],
+        ['03', '集中开发', '9 月第一周—30 日', '公开持续提交，保留 Issues、PR 与更新记录。'],
+        ['04', '项目验收', '9 月 30 日（截止报名）', '提交代码、README、测试与可复现的演示说明。'],
         [
           '05',
           '季度优秀项目评选',
@@ -140,9 +140,9 @@ const copy = {
       calendarSummary: '8 月开始 · 次年 7 月结束',
       currentLabel: '当前赛季度',
       currentBadge: '进行中 · 九月赛',
-      monthlyTiming: '每月一期 · 本期九月赛 · 9 月 24 日截止报名与验收',
+      monthlyTiming: '每月一期 · 本期九月赛 · 9 月 30 日截止报名与验收',
       cycleDates: [
-        [['月度周期', '每月一期'], ['当前赛期', '九月赛 · 9 月 24 日截止报名与验收']],
+        [['月度周期', '每月一期'], ['当前赛期', '九月赛 · 9 月 30 日截止报名与验收']],
         [['第一赛季度', '8—10 月'], ['第二赛季度', '11 月—次年 1 月'], ['第三赛季度', '2—4 月'], ['第四赛季度', '5—7 月']],
         [['上半年度', '8 月—次年 1 月'], ['下半年度', '2—7 月']],
         [['年度周期', '8 月—次年 7 月']],
@@ -207,7 +207,7 @@ const copy = {
       badge: '参赛必读',
       listTitle: '重要信息清单',
       items: [
-        '本期项目验收为 9 月 24 日，同时截止报名；报名需提交参赛信息、公开仓库与一页项目说明。',
+        '本期项目验收为 9 月 30 日，同时截止报名；报名需提交参赛信息、公开仓库与一页项目说明。',
         '开发过程需在公开仓库持续提交，并保留 commits、Issues、PR 与更新记录。',
         '验收项目需以 MoonBit 为主要实现语言，并提供清晰 README、可运行示例与必要测试。',
         '原创、移植或已有项目均可参与；已有项目须包含本期实质新增工作，移植项目须说明来源与许可证。',
@@ -306,7 +306,7 @@ const copy = {
     secondaryAction: 'Event charter',
     periodLabel: 'September round',
     currentRound: 'Current round: September',
-    period: 'First week of Sep — Sep 24',
+    period: 'First week of Sep — Sep 30',
     panelTitle: 'Not a prompting contest',
     panelBody:
       'We care about engineering boundaries, test quality, open-source compliance, and maintainability. AI may help build it, but participants must understand and own the result.',
@@ -346,8 +346,8 @@ const copy = {
       items: [
         ['01', 'Apply', 'When registration opens', 'Submit participant details, a public repo, and a one-page proposal.'],
         ['02', 'Eligibility review', 'Rolling review', 'Confirm the topic, scope, and entry details before development.'],
-        ['03', 'Build in public', 'First week—Sep 24', 'Keep commits, Issues, PRs, and updates visible.'],
-        ['04', 'Acceptance', 'Sep 24 (registration closes)', 'Submit code, README, tests, and a reproducible demo.'],
+        ['03', 'Build in public', 'First week—Sep 30', 'Keep commits, Issues, PRs, and updates visible.'],
+        ['04', 'Acceptance', 'Sep 30 (registration closes)', 'Submit code, README, tests, and a reproducible demo.'],
         [
           '05',
           'Quarterly selection',
@@ -404,9 +404,9 @@ const copy = {
       calendarSummary: 'August to July of the following year',
       currentLabel: 'Current quarter',
       currentBadge: 'In progress · September',
-      monthlyTiming: 'One round each month · September round · Registration and submission close Sep 24',
+      monthlyTiming: 'One round each month · September round · Registration and submission close Sep 30',
       cycleDates: [
-        [['Monthly cycle', 'One round each month'], ['Current round', 'September · Registration and submission close Sep 24']],
+        [['Monthly cycle', 'One round each month'], ['Current round', 'September · Registration and submission close Sep 30']],
         [['First quarter', 'Aug–Oct'], ['Second quarter', 'Nov–Jan of the following year'], ['Third quarter', 'Feb–Apr'], ['Fourth quarter', 'May–Jul']],
         [['First half', 'Aug–Jan of the following year'], ['Second half', 'Feb–Jul']],
         [['Annual cycle', 'Aug–Jul of the following year']],
@@ -472,7 +472,7 @@ const copy = {
       badge: 'MUST READ',
       listTitle: 'Important information',
       items: [
-        'Project acceptance is on September 24, when registration also closes. Submit participant details, a public repository, and a one-page proposal.',
+        'Project acceptance is on September 30, when registration also closes. Submit participant details, a public repository, and a one-page proposal.',
         'Build in public with continuous commits, and retain Issues, pull requests, and update records.',
         'MoonBit must be the primary implementation language. Include a clear README, runnable examples, and essential tests.',
         'Original, ported, and existing projects are welcome. Existing projects need substantial new work; ports must disclose their source and license.',
