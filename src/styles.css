@@ -1372,28 +1372,6 @@ section {
   line-height: 1.6;
 }
 
-.hero-partner {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-  color: #ff75cb;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.hero-partner i {
-  height: 20px;
-  width: 1px;
-  background: rgba(255, 255, 255, .35);
-}
-
-.hero-partner img {
-  width: 85px;
-  height: 30px;
-  object-fit: contain;
-}
-
 .hero-award-highlight {
   display: flex;
   align-items: center;
@@ -1525,7 +1503,6 @@ section {
 .award-cycle-note { margin: 18px 0 0; color: var(--text-soft); font-size: 11px; line-height: 1.7; }
 
 @media (max-width: 760px) {
-  .hero-partner { margin-bottom: 12px; font-size: 16px; }
   .hero-award-highlight { padding: 18px; }
   .hero-award-highlight span { font-size: 12px; }
   .award-cycles { padding: 18px; }

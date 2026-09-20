@@ -653,7 +653,6 @@ export default function Home() {
         <div className="site-shell">
           <div className="hero-banner">
             <div className="hero-banner-copy">
-              <div className="hero-partner"><span>MoonBit</span><i aria-hidden="true" /><img src={withBasePath('/csdn-logo.png')} alt="CSDN" /></div>
               <span className="hero-kicker">{t.eventTag}</span>
               <h1>
                 <span className="hero-wordmark">MoonBit</span>
