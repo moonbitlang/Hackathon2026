@@ -3,6 +3,7 @@ import {
   CalendarDays,
   Check,
   CodeXml,
+  Info,
   Languages,
   Moon,
   Network,
@@ -31,9 +32,10 @@ const copy = {
       ['参赛流程', '#process'],
       ['奖励机制', '#awards'],
       ['方向与验收', '#directions'],
+      ['报名与组队', '#entry-rules'],
       ['赛事组织', '#organization'],
     ],
-    eventTag: '2026 · 线上开源赛事',
+    eventTag: '2026 · 年度开源赛事',
     titleTop: '用 MoonBit 与 AI，',
     titleBottom: '把真实需求做成开源软件。',
     description:
@@ -41,8 +43,8 @@ const copy = {
     primaryAction: '查看参赛方式',
     secondaryAction: '查看赛事章程',
     periodLabel: '本期赛程',
-    currentRound: '当前赛期：九月赛',
-    period: '9 月第一周 — 9 月 30 日',
+    currentRound: '当前赛季：十月赛',
+    period: '10 月赛季 · 10 月 31 日截止',
     panelTitle: '这不是提示词比赛',
     panelBody:
       '我们更关注工程边界、测试质量、开源合规和可维护性。AI 可以参与开发，但最终成果必须由参赛者理解并负责。',
@@ -53,6 +55,8 @@ const copy = {
       pending: '二维码待更新',
       registrationAction: '点击报名',
       groupRequirement: '参赛选手必须加入赛事交流群，否则将影响奖金发放。',
+      groupNicknameLabel: '入群后修改昵称',
+      groupNicknameHint: '方便赛事沟通与奖金发放',
       note: '请以赛事官方发布为准',
       slots: [
         [
@@ -63,7 +67,7 @@ const copy = {
         ],
         [
           '赛事群',
-          '扫码或点击加入 · 关联奖金发放',
+          '扫码或点击加入',
           '/wechat-event-group-qr.png',
           'https://work.weixin.qq.com/gm/5b6b92c8677d0555f3fb6a3f1a081399',
         ],
@@ -80,10 +84,10 @@ const copy = {
       title: '从一个清晰的目标，走到可验收的成果。',
       description: '赛程在线完成。每一步都围绕公开仓库展开，让开发过程和最终质量都可追踪。',
       items: [
-        ['01', '报名申报', '报名开放后', '提交参赛信息、公开仓库与一页项目说明。'],
-        ['02', '资格审核', '滚动审核', '确认选题、工作范围与参赛信息，通过后进入本期开发。'],
-        ['03', '集中开发', '9 月第一周—30 日', '公开持续提交，保留 Issues、PR 与更新记录。'],
-        ['04', '项目验收', '9 月 30 日（截止报名）', '提交代码、README、测试与可复现的演示说明。'],
+        ['01', '报名申报', '报名开放后', '沿用原有报名表，十月最多提交 3 次；提交参赛信息、公开仓库与一页项目说明。'],
+        ['02', '资格审核', '滚动审核', '以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。'],
+        ['03', '集中开发', '截至 10 月 31 日', '公开持续提交，保留 Issues、PR 与更新记录。'],
+        ['04', '项目验收', '10 月 31 日（报名与验收截止）', '提交代码、README、测试与可复现的演示说明。'],
         [
           '05',
           '季度优秀项目评选',
@@ -116,6 +120,15 @@ const copy = {
         note: '赛季度从 8 月起计算：第一赛季度 8—10 月，第二赛季度 11 月—次年 1 月，第三赛季度 2—4 月，第四赛季度 5—7 月。具体评选时间、形式及结果发布安排，以赛事官方通知为准。',
       },
     },
+    entryRules: {
+      eyebrow: '十月参赛须知',
+      title: '报名更清楚，组队更简单。',
+      items: [
+        ['01', '十月最多提交 3 次', '继续沿用原有报名表。以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。'],
+        ['02', '每队不超过 3 人', '由队长统一确认队伍人数和其他队员的 GitHub ID。2 人队奖金每人 1/2，3 人队每人 1/3。'],
+        ['03', '已有项目也欢迎', '可以维护非本人创建的旧有项目，包括 MoonBit 官方项目；需保留可追溯的实质贡献记录。'],
+      ],
+    },
     directions: {
       eyebrow: '比赛方向',
       title: '从基础软件出发，解决一个真实问题。',
@@ -131,18 +144,18 @@ const copy = {
     awards: {
       eyebrow: '奖励机制',
       title: '月度项目支持，多周期奖金可叠加。',
-      description: '季度、半年度和年度奖金可叠加获得，单人最高可获约 7.5 万元。奖金分别评定，互不冲突，具体详情以正式章程为准。',
+      description: '季度、半年度和年度奖金可叠加获得，季度、半年度、年度一等奖各获一次，合计 72,000 元，另有项目支持及推荐奖励。奖金分别评定，互不冲突，具体详情以正式章程为准。',
       stackingTitle: '季度、半年度和年度奖金可叠加获得',
-      stackingValue: '单人最高可获约 7.5 万元',
+      stackingValue: '三项一等奖合计 72,000 元',
       stackingNote: '奖金分别评定，互不冲突，具体详情以正式章程为准。',
       cyclesLabel: '奖励评选周期',
       calendarTitle: '赛事年历',
       calendarSummary: '8 月开始 · 次年 7 月结束',
       currentLabel: '当前赛季度',
-      currentBadge: '进行中 · 九月赛',
-      monthlyTiming: '每月一期 · 本期九月赛 · 9 月 30 日截止报名与验收',
+      currentBadge: '十月赛季',
+      monthlyTiming: '本期十月赛 · 10 月 31 日截止报名与验收',
       cycleDates: [
-        [['月度周期', '每月一期'], ['当前赛期', '九月赛 · 9 月 30 日截止报名与验收']],
+        [['月度周期', '每月一期'], ['当前赛期', '十月赛 · 10 月 31 日截止报名与验收']],
         [['第一赛季度', '8—10 月'], ['第二赛季度', '11 月—次年 1 月'], ['第三赛季度', '2—4 月'], ['第四赛季度', '5—7 月']],
         [['上半年度', '8 月—次年 1 月'], ['下半年度', '2—7 月']],
         [['年度周期', '8 月—次年 7 月']],
@@ -207,12 +220,12 @@ const copy = {
       badge: '参赛必读',
       listTitle: '重要信息清单',
       items: [
-        '本期项目验收为 9 月 30 日，同时截止报名；报名需提交参赛信息、公开仓库与一页项目说明。',
+        '本期为十月赛，报名与验收截止时间为 2026 年 10 月 31 日。实际报名时间以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。',
         '开发过程需在公开仓库持续提交，并保留 commits、Issues、PR 与更新记录。',
         '验收项目需以 MoonBit 为主要实现语言，并提供清晰 README、可运行示例与必要测试。',
         '原创、移植或已有项目均可参与；已有项目须包含本期实质新增工作，移植项目须说明来源与许可证。',
-        '参赛选手必须加入赛事交流群，否则将影响奖金发放。',
-        '月度支持为 150 元启动支持与 350 元完成支持；季度、半年度和年度奖金分别评定，可叠加获得，单人最高可获约 7.5 万元。',
+        '参赛选手必须加入赛事交流群，并将群昵称改为自己的 GitHub ID，否则将影响奖金发放。',
+        '月度支持为 150 元启动支持与 350 元完成支持；季度、半年度和年度奖金分别评定，可叠加获得，季度、半年度、年度一等奖各获一次，合计 72,000 元，另有项目支持及推荐奖励。',
       ],
       action: '项目申报',
     },
@@ -277,14 +290,14 @@ const copy = {
       items: [
         ['谁可以参加？', '赛事面向所有对 MoonBit、AI 编程、开源生态和基础软件感兴趣的开发者，不限学生或社会人士。'],
         ['可以使用 AI 写代码吗？', '可以。AI 可参与代码生成、接口设计、测试和文档，但参赛者必须能够解释技术选择并对最终质量负责。'],
-        ['可以提交已有项目吗？', '可以，但验收只计算本期新增的实质工作；重复、拆分或简单修改不符合要求。'],
+        ['可以提交已有项目吗？', '可以，也可维护非本人创建的旧有项目（如 MoonBit 官方项目）。验收只计算本期新增的实质工作；重复、拆分或简单修改不符合要求。'],
         ['项目必须做得很大吗？', '不必。比起堆叠功能，我们更看重清晰边界、可靠测试、完整文档和真实可用性。'],
-        ['奖金可以叠加获得吗？', '可以。季度、半年度和年度奖金分别评定，可叠加获得，单人最高可获约 7.5 万元。季度一等奖 12,000 元、半年度一等奖 24,000 元、年度一等奖 36,000 元，具体详情以正式章程为准。'],
-        ['报名入口在哪里？', '点击页面中的「点击报名」或扫描飞书报名二维码，提交项目与参赛信息。参赛选手必须加入赛事交流群，否则将影响奖金发放。'],
+        ['奖金可以叠加获得吗？', '可以。季度、半年度和年度奖金分别评定，可叠加获得，季度、半年度、年度一等奖各获一次，合计 72,000 元，另有项目支持及推荐奖励。季度一等奖 12,000 元、半年度一等奖 24,000 元、年度一等奖 36,000 元，具体详情以正式章程为准。'],
+        ['报名入口在哪里？', '点击页面中的「点击报名」或扫描飞书报名二维码，提交项目与参赛信息。参赛选手必须加入赛事交流群，并将群昵称改为自己的 GitHub ID，否则将影响奖金发放。'],
       ],
     },
     footer: 'MoonBit 黑客松',
-    footerNote: '当前页面为正式版 · 赛事信息以正式赛事章程为准',
+    footerNote: '赛事信息以正式赛事章程和官方通知为准',
     switchLanguage: 'Switch to English',
     switchTheme: '切换明暗模式',
   },
@@ -295,18 +308,19 @@ const copy = {
       ['Process', '#process'],
       ['Awards', '#awards'],
       ['Directions & acceptance', '#directions'],
+      ['Entry & teams', '#entry-rules'],
       ['Organization', '#organization'],
     ],
-    eventTag: '2026 · ONLINE OPEN SOURCE HACKATHON',
+    eventTag: '2026 · ANNUAL OPEN SOURCE HACKATHON',
     titleTop: 'Use MoonBit and AI to ',
     titleBottom: 'turn real needs into open-source software.',
     description:
       'An online open-source hackathon for every developer. Use MoonBit and AI programming tools to turn a real need into usable, tested, maintainable software.',
     primaryAction: 'How to participate',
     secondaryAction: 'Event charter',
-    periodLabel: 'September round',
-    currentRound: 'Current round: September',
-    period: 'First week of Sep — Sep 30',
+    periodLabel: 'October round',
+    currentRound: 'Current season: October',
+    period: 'October · Deadline: October 31',
     panelTitle: 'Not a prompting contest',
     panelBody:
       'We care about engineering boundaries, test quality, open-source compliance, and maintainability. AI may help build it, but participants must understand and own the result.',
@@ -317,6 +331,8 @@ const copy = {
       pending: 'QR coming soon',
       registrationAction: 'Register now',
       groupRequirement: 'All participants must join the event group, or prize payment will be affected.',
+      groupNicknameLabel: 'Set your group nickname to',
+      groupNicknameHint: 'For event updates and prize payment',
       note: 'Please follow official event announcements',
       slots: [
         [
@@ -327,7 +343,7 @@ const copy = {
         ],
         [
           'Event group',
-          'Scan or tap to join · required for prize payment',
+          'Scan or tap to join',
           '/wechat-event-group-qr.png',
           'https://work.weixin.qq.com/gm/5b6b92c8677d0555f3fb6a3f1a081399',
         ],
@@ -344,10 +360,10 @@ const copy = {
       title: 'From a clear goal to an accepted result.',
       description: 'The hackathon runs online. Every step centers on a public repository so both progress and quality stay traceable.',
       items: [
-        ['01', 'Apply', 'When registration opens', 'Submit participant details, a public repo, and a one-page proposal.'],
-        ['02', 'Eligibility review', 'Rolling review', 'Confirm the topic, scope, and entry details before development.'],
-        ['03', 'Build in public', 'First week—Sep 30', 'Keep commits, Issues, PRs, and updates visible.'],
-        ['04', 'Acceptance', 'Sep 30 (registration closes)', 'Submit code, README, tests, and a reproducible demo.'],
+        ['01', 'Apply', 'When registration opens', 'Use the existing form, with up to three submissions in October. Include participant details, a public repo, and a one-page proposal.'],
+        ['02', 'Eligibility review', 'Rolling review', 'The registration time is the time of the last valid submission or edit before approval. Projects that do not pass review may be revised.'],
+        ['03', 'Build in public', 'Through October 31', 'Keep commits, Issues, PRs, and updates visible.'],
+        ['04', 'Acceptance', 'October 31 (registration and submission deadline)', 'Submit code, README, tests, and a reproducible demo.'],
         [
           '05',
           'Quarterly selection',
@@ -380,6 +396,15 @@ const copy = {
         note: 'Competition quarters begin in August: Q1 is August–October; Q2 is November–January of the following year; Q3 is February–April; Q4 is May–July. Exact review dates, formats, and result announcements follow official event notices.',
       },
     },
+    entryRules: {
+      eyebrow: 'OCTOBER ENTRY GUIDE',
+      title: 'Clear applications. Simple team rules.',
+      items: [
+        ['01', 'Up to 3 submissions in October', 'Continue using the existing form. The registration time is the time of the last valid submission or edit before approval; projects that do not pass review may be revised.'],
+        ['02', 'Up to 3 people per team', 'The captain confirms team size and all other members’ GitHub IDs. Prizes are split equally: 1/2 each for two people, 1/3 each for three.'],
+        ['03', 'Existing projects welcome', 'You may maintain projects created by others, including official MoonBit projects. Keep a traceable record of substantial contributions.'],
+      ],
+    },
     directions: {
       eyebrow: 'DIRECTIONS',
       title: 'Start with infrastructure. Solve a real problem.',
@@ -395,18 +420,18 @@ const copy = {
     awards: {
       eyebrow: 'AWARDS',
       title: 'Monthly support. Awards across multiple cycles.',
-      description: 'Quarterly, half-year, and annual prizes can be combined, with up to approximately RMB 75,000 per person. Awards are assessed separately; see the official charter for details.',
+      description: 'Quarterly, half-year, and annual prizes can be combined. Winning first prize once in each category totals RMB 72,000, plus eligible project support and referral rewards. Awards are assessed separately; see the official charter for details.',
       stackingTitle: 'Quarterly, half-year, and annual prizes can be combined',
-      stackingValue: 'Up to approx. RMB 75,000 per person',
+      stackingValue: 'Three first prizes total RMB 72,000',
       stackingNote: 'Awards are assessed separately. See the official charter for details.',
       cyclesLabel: 'Award cycles',
       calendarTitle: 'Competition calendar',
       calendarSummary: 'August to July of the following year',
       currentLabel: 'Current quarter',
-      currentBadge: 'In progress · September',
-      monthlyTiming: 'One round each month · September round · Registration and submission close Sep 30',
+      currentBadge: 'October season',
+      monthlyTiming: 'October season · Registration and submission close October 31',
       cycleDates: [
-        [['Monthly cycle', 'One round each month'], ['Current round', 'September · Registration and submission close Sep 30']],
+        [['Monthly cycle', 'One round each month'], ['Current round', 'October · Deadline: October 31']],
         [['First quarter', 'Aug–Oct'], ['Second quarter', 'Nov–Jan of the following year'], ['Third quarter', 'Feb–Apr'], ['Fourth quarter', 'May–Jul']],
         [['First half', 'Aug–Jan of the following year'], ['Second half', 'Feb–Jul']],
         [['Annual cycle', 'Aug–Jul of the following year']],
@@ -472,12 +497,12 @@ const copy = {
       badge: 'MUST READ',
       listTitle: 'Important information',
       items: [
-        'Project acceptance is on September 30, when registration also closes. Submit participant details, a public repository, and a one-page proposal.',
+        'This is the October season; registration and submission close on October 31, 2026. The registration time is the time of the last valid submission or edit before approval, and projects that do not pass review may be revised.',
         'Build in public with continuous commits, and retain Issues, pull requests, and update records.',
         'MoonBit must be the primary implementation language. Include a clear README, runnable examples, and essential tests.',
         'Original, ported, and existing projects are welcome. Existing projects need substantial new work; ports must disclose their source and license.',
-        'All participants must join the event group, or prize payment will be affected.',
-        'Monthly support includes RMB 150 for kickoff and RMB 350 for completion. Quarterly, half-year, and annual prizes are assessed separately and can be combined, with up to approximately RMB 75,000 per person.',
+        'All participants must join the event group and use their GitHub ID as their group nickname, or prize payment will be affected.',
+        'Monthly support includes RMB 150 for kickoff and RMB 350 for completion. Quarterly, half-year, and annual prizes are assessed separately and can be combined. Winning first prize once in each category totals RMB 72,000, plus eligible project support and referral rewards.',
       ],
       action: 'Apply now',
     },
@@ -542,10 +567,10 @@ const copy = {
       items: [
         ['Who can participate?', 'The hackathon is open to anyone interested in MoonBit, AI programming, open source, and infrastructure software—students and professionals alike.'],
         ['Can I use AI to write code?', 'Yes. AI may help with code, APIs, tests, and docs, but participants must explain technical choices and own the final quality.'],
-        ['Can I submit an existing project?', 'Yes, but only substantial work completed during this round counts. Duplicates, split entries, and superficial edits do not qualify.'],
+        ['Can I submit an existing project?', 'Yes, including maintaining projects created by others, such as official MoonBit projects. Only substantial work completed during this round counts. Duplicates, split entries, and superficial edits do not qualify.'],
         ['Does the project need to be large?', 'No. Clear scope, reliable tests, complete docs, and real usefulness matter more than feature count.'],
-        ['Can prizes be combined?', 'Yes. Quarterly, half-year, and annual prizes are assessed separately and can be combined, with up to approximately RMB 75,000 per person. First prizes are RMB 12,000, RMB 24,000, and RMB 36,000 respectively. See the official charter for details.'],
-        ['Where is the registration form?', 'Click Register now or scan the Feishu QR code to submit your project and participant details. All participants must join the event group, or prize payment will be affected.'],
+        ['Can prizes be combined?', 'Yes. Quarterly, half-year, and annual prizes are assessed separately and can be combined. Winning first prize once in each category totals RMB 72,000, plus eligible project support and referral rewards. First prizes are RMB 12,000, RMB 24,000, and RMB 36,000 respectively. See the official charter for details.'],
+        ['Where is the registration form?', 'Click Register now or scan the Feishu QR code to submit your project and participant details. All participants must join the event group and use their GitHub ID as their group nickname, or prize payment will be affected.'],
       ],
     },
     footer: 'MoonBit Hackathon',
@@ -604,7 +629,7 @@ export default function Home() {
     <main className="challenge-site site--with-qr" data-locale={locale} data-theme={theme}>
       {isPreview && (
         <div className="preview-notice" role="status">
-          {locale === 'zh' ? '预览版 · 奖励规则已按新海报更新，待确认后正式上线' : 'Preview · Updated award rules, awaiting approval for launch'}
+          {locale === 'zh' ? '十月赛官网预览 · 报名与验收截止：10 月 31 日' : 'October website preview · Registration and submission close October 31'}
         </div>
       )}
       <header className="site-header">
@@ -733,6 +758,13 @@ export default function Home() {
               <div className="registration-qr-copy">
                 <strong>{label}</strong>
                 <small>{description}</small>
+                {index === 1 && (
+                  <div className="registration-group-nickname">
+                    <span>{t.qrFloat.groupNicknameLabel}</span>
+                    <strong>{locale === 'zh' ? '你的 GitHub ID' : 'Your GitHub ID'}</strong>
+                    <small>{t.qrFloat.groupNicknameHint}</small>
+                  </div>
+                )}
                 {index === 0 && href ? (
                   <a
                     className="registration-action"
@@ -748,9 +780,27 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="registration-float-alert">{t.qrFloat.groupRequirement}</p>
+        <p className="registration-float-alert"><Info aria-hidden="true" /><span>{t.qrFloat.groupRequirement}</span></p>
         <p className="registration-float-note">{t.qrFloat.note}</p>
       </aside>
+
+      <section className="content-section entry-section" id="entry-rules">
+        <div className="site-shell">
+          <div className="section-head">
+            <span className="section-eyebrow">{t.entryRules.eyebrow}</span>
+            <h2>{t.entryRules.title}</h2>
+          </div>
+          <div className="quarterly-logic-grid entry-rules-grid">
+            {t.entryRules.items.map(([number, title, description]) => (
+              <article key={number}>
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="content-section process-section" id="process">
         <div className="site-shell">
@@ -802,7 +852,6 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <p className="quarterly-logic-note">{t.process.quarterly.note}</p>
           </div>
         </div>
       </section>
@@ -854,6 +903,7 @@ export default function Home() {
                 <strong>{t.awards.cycleDates[3][0][1]}</strong>
               </div>
               <p className="calendar-monthly-note">{t.awards.monthlyTiming}</p>
+              <p className="calendar-quarter-note">{t.process.quarterly.note}</p>
             </div>
             <p className="award-cycle-note">{t.awards.stackingNote}</p>
           </div>
@@ -1117,7 +1167,7 @@ export default function Home() {
         <div className="site-shell footer-inner">
           <div>
             <strong>{t.footer}</strong>
-            <p>{isPreview ? (locale === 'zh' ? '预览版 · 待确认后正式上线' : 'Preview · Awaiting approval for launch') : t.footerNote}</p>
+            <p>{isPreview ? (locale === 'zh' ? '预览版 · 赛事信息以正式官网为准' : 'Preview · Please refer to the official event website') : t.footerNote}</p>
           </div>
           <a href="#top">
             TOP

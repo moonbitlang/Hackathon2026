@@ -272,6 +272,32 @@ summary:focus-visible {
   line-height: 1.35;
 }
 
+/* The nickname instruction sits beside the group QR, with one clear emphasis. */
+.registration-group-nickname {
+  display: grid;
+  gap: 3px;
+  margin-top: 10px;
+  padding-left: 9px;
+  border-left: 2px solid var(--primary);
+  line-height: 1.45;
+}
+
+.registration-group-nickname > span {
+  color: var(--text-soft);
+  font-size: 10px;
+}
+
+.registration-group-nickname > strong {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.registration-group-nickname > small {
+  color: var(--text-soft);
+  font-size: 10px;
+}
+
 .registration-action {
   display: inline-flex;
   min-height: 32px;
@@ -2822,4 +2848,74 @@ footer {
 
 @media (min-width: 1201px) {
   .challenge-site:has(.preview-notice) .registration-float { top: 134px; }
+}
+
+/* October entry rules reuse the existing visual language. */
+.calendar-quarter-note {
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.entry-section { padding-bottom: 12px; }
+.entry-rules-grid article { padding: 22px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.entry-rules-grid h3 { margin: 10px 0; font-size: 20px; }
+
+/* Refined registration panel: quiet borders, generous QR margins, clear hierarchy. */
+.registration-float {
+  border-color: var(--border);
+  background: var(--panel-strong);
+  box-shadow: 0 12px 40px rgba(34, 42, 78, 0.09);
+}
+
+.registration-qr-grid { gap: 10px; }
+.registration-qr-item {
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 14px;
+  padding: 12px;
+  border-color: var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+}
+.registration-qr-link {
+  padding: 6px;
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  border-radius: 10px;
+}
+.registration-qr-copy > strong { font-size: 14px; line-height: 1.4; }
+.registration-qr-copy > small { margin-top: 4px; font-size: 11px; line-height: 1.5; }
+.registration-action {
+  min-height: 32px;
+  margin-top: 10px;
+  border-radius: 9px;
+  box-shadow: none;
+}
+.registration-float-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 11px 12px;
+  border: 0;
+  background: var(--primary-soft);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.registration-float-alert > svg {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  color: var(--primary);
+}
+.registration-float-note { margin-top: 10px; text-align: center; }
+@media (min-width: 1201px) {
+  .registration-float { max-height: calc(100dvh - 150px); overflow-y: auto; }
+  .registration-qr-item { grid-template-columns: 104px minmax(0, 1fr); padding: 10px; gap: 10px; }
+}
+@media (max-width: 380px) {
+  .registration-qr-item { grid-template-columns: 96px minmax(0, 1fr); padding: 10px; gap: 10px; }
 }
