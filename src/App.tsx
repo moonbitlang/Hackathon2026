@@ -43,8 +43,8 @@ const copy = {
     primaryAction: '查看参赛方式',
     secondaryAction: '查看赛事章程',
     periodLabel: '本期赛程',
-    currentRound: '当前赛季：十月赛',
-    period: '10 月赛季 · 10 月 31 日截止',
+    currentRound: '当前赛季：十一月赛',
+    period: '11 月赛季 · 截止日期以官方通知为准',
     panelTitle: '这不是提示词比赛',
     panelBody:
       '我们更关注工程边界、测试质量、开源合规和可维护性。AI 可以参与开发，但最终成果必须由参赛者理解并负责。',
@@ -84,10 +84,10 @@ const copy = {
       title: '从一个清晰的目标，走到可验收的成果。',
       description: '赛程在线完成。每一步都围绕公开仓库展开，让开发过程和最终质量都可追踪。',
       items: [
-        ['01', '报名申报', '报名开放后', '沿用原有报名表，十月最多提交 3 次；提交参赛信息、公开仓库与一页项目说明。'],
+        ['01', '报名申报', '报名开放后', '沿用原有报名表，提交参赛信息、公开仓库与一页项目说明。'],
         ['02', '资格审核', '滚动审核', '以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。'],
-        ['03', '集中开发', '截至 10 月 31 日', '公开持续提交，保留 Issues、PR 与更新记录。'],
-        ['04', '项目验收', '10 月 31 日（报名与验收截止）', '提交代码、README、测试与可复现的演示说明。'],
+        ['03', '集中开发', '本期赛季内', '公开持续提交，保留 Issues、PR 与更新记录。'],
+        ['04', '项目验收', '以赛事官方通知为准', '提交代码、README、测试与可复现的演示说明。'],
         [
           '05',
           '季度优秀项目评选',
@@ -121,10 +121,10 @@ const copy = {
       },
     },
     entryRules: {
-      eyebrow: '十月参赛须知',
+      eyebrow: '十一月参赛须知',
       title: '报名更清楚，组队更简单。',
       items: [
-        ['01', '十月最多提交 3 次', '继续沿用原有报名表。以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。'],
+        ['01', '沿用原有报名表', '继续沿用原有报名表。以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。'],
         ['02', '每队不超过 3 人', '由队长统一确认队伍人数和其他队员的 GitHub ID。2 人队奖金每人 1/2，3 人队每人 1/3。'],
         ['03', '已有项目也欢迎', '可以维护非本人创建的旧有项目，包括 MoonBit 官方项目；需保留可追溯的实质贡献记录。'],
       ],
@@ -152,10 +152,10 @@ const copy = {
       calendarTitle: '赛事年历',
       calendarSummary: '8 月开始 · 次年 7 月结束',
       currentLabel: '当前赛季度',
-      currentBadge: '十月赛季',
-      monthlyTiming: '本期十月赛 · 10 月 31 日截止报名与验收',
+      currentBadge: '十一月赛季',
+      monthlyTiming: '本期十一月赛 · 报名与验收日期以官方通知为准',
       cycleDates: [
-        [['月度周期', '每月一期'], ['当前赛期', '十月赛 · 10 月 31 日截止报名与验收']],
+        [['月度周期', '每月一期'], ['当前赛期', '十一月赛 · 报名与验收日期以官方通知为准']],
         [['第一赛季度', '8—10 月'], ['第二赛季度', '11 月—次年 1 月'], ['第三赛季度', '2—4 月'], ['第四赛季度', '5—7 月']],
         [['上半年度', '8 月—次年 1 月'], ['下半年度', '2—7 月']],
         [['年度周期', '8 月—次年 7 月']],
@@ -220,7 +220,7 @@ const copy = {
       badge: '参赛必读',
       listTitle: '重要信息清单',
       items: [
-        '本期为十月赛，报名与验收截止时间为 2026 年 10 月 31 日。实际报名时间以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。',
+        '本期为十一月赛，报名与验收截止时间为 以赛事官方通知为准。实际报名时间以通过审核前最后一次有效提交或修改的时间为准；未通过的项目可进行修改。',
         '开发过程需在公开仓库持续提交，并保留 commits、Issues、PR 与更新记录。',
         '验收项目需以 MoonBit 为主要实现语言，并提供清晰 README、可运行示例与必要测试。',
         '原创、移植或已有项目均可参与；已有项目须包含本期实质新增工作，移植项目须说明来源与许可证。',
@@ -318,9 +318,9 @@ const copy = {
       'An online open-source hackathon for every developer. Use MoonBit and AI programming tools to turn a real need into usable, tested, maintainable software.',
     primaryAction: 'How to participate',
     secondaryAction: 'Event charter',
-    periodLabel: 'October round',
-    currentRound: 'Current season: October',
-    period: 'October · Deadline: October 31',
+    periodLabel: 'November round',
+    currentRound: 'Current season: November',
+    period: 'November · See official notices for deadlines',
     panelTitle: 'Not a prompting contest',
     panelBody:
       'We care about engineering boundaries, test quality, open-source compliance, and maintainability. AI may help build it, but participants must understand and own the result.',
@@ -360,10 +360,10 @@ const copy = {
       title: 'From a clear goal to an accepted result.',
       description: 'The hackathon runs online. Every step centers on a public repository so both progress and quality stay traceable.',
       items: [
-        ['01', 'Apply', 'When registration opens', 'Use the existing form, with up to three submissions in October. Include participant details, a public repo, and a one-page proposal.'],
+        ['01', 'Apply', 'When registration opens', 'Use the existing form, for this round. Include participant details, a public repo, and a one-page proposal.'],
         ['02', 'Eligibility review', 'Rolling review', 'The registration time is the time of the last valid submission or edit before approval. Projects that do not pass review may be revised.'],
-        ['03', 'Build in public', 'Through October 31', 'Keep commits, Issues, PRs, and updates visible.'],
-        ['04', 'Acceptance', 'October 31 (registration and submission deadline)', 'Submit code, README, tests, and a reproducible demo.'],
+        ['03', 'Build in public', 'During this round', 'Keep commits, Issues, PRs, and updates visible.'],
+        ['04', 'Acceptance', 'See official event notices', 'Submit code, README, tests, and a reproducible demo.'],
         [
           '05',
           'Quarterly selection',
@@ -400,7 +400,7 @@ const copy = {
       eyebrow: 'OCTOBER ENTRY GUIDE',
       title: 'Clear applications. Simple team rules.',
       items: [
-        ['01', 'Up to 3 submissions in October', 'Continue using the existing form. The registration time is the time of the last valid submission or edit before approval; projects that do not pass review may be revised.'],
+        ['01', 'Use the existing registration form', 'The registration time is the time of the last valid submission or edit before approval; projects that do not pass review may be revised.'],
         ['02', 'Up to 3 people per team', 'The captain confirms team size and all other members’ GitHub IDs. Prizes are split equally: 1/2 each for two people, 1/3 each for three.'],
         ['03', 'Existing projects welcome', 'You may maintain projects created by others, including official MoonBit projects. Keep a traceable record of substantial contributions.'],
       ],
@@ -428,10 +428,10 @@ const copy = {
       calendarTitle: 'Competition calendar',
       calendarSummary: 'August to July of the following year',
       currentLabel: 'Current quarter',
-      currentBadge: 'October season',
-      monthlyTiming: 'October season · Registration and submission close October 31',
+      currentBadge: 'November season',
+      monthlyTiming: 'November season · See official notices for registration and submission deadlines',
       cycleDates: [
-        [['Monthly cycle', 'One round each month'], ['Current round', 'October · Deadline: October 31']],
+        [['Monthly cycle', 'One round each month'], ['Current round', 'November · See official notices for deadlines']],
         [['First quarter', 'Aug–Oct'], ['Second quarter', 'Nov–Jan of the following year'], ['Third quarter', 'Feb–Apr'], ['Fourth quarter', 'May–Jul']],
         [['First half', 'Aug–Jan of the following year'], ['Second half', 'Feb–Jul']],
         [['Annual cycle', 'Aug–Jul of the following year']],
@@ -497,7 +497,7 @@ const copy = {
       badge: 'MUST READ',
       listTitle: 'Important information',
       items: [
-        'This is the October season; registration and submission close on October 31, 2026. The registration time is the time of the last valid submission or edit before approval, and projects that do not pass review may be revised.',
+        'This is the November season; registration and submission deadlines follow official event notices. The registration time is the time of the last valid submission or edit before approval, and projects that do not pass review may be revised.',
         'Build in public with continuous commits, and retain Issues, pull requests, and update records.',
         'MoonBit must be the primary implementation language. Include a clear README, runnable examples, and essential tests.',
         'Original, ported, and existing projects are welcome. Existing projects need substantial new work; ports must disclose their source and license.',
@@ -629,7 +629,7 @@ export default function Home() {
     <main className="challenge-site site--with-qr" data-locale={locale} data-theme={theme}>
       {isPreview && (
         <div className="preview-notice" role="status">
-          {locale === 'zh' ? '十月赛官网预览 · 报名与验收截止：10 月 31 日' : 'October website preview · Registration and submission close October 31'}
+          {locale === 'zh' ? '十一月赛季 · 报名与验收日期以官方通知为准' : 'November season · See official notices for registration and submission deadlines'}
         </div>
       )}
       <header className="site-header">
@@ -885,11 +885,11 @@ export default function Home() {
               </div>
               <ol className="calendar-quarters">
                 {t.awards.cycleDates[1].map(([cycle, dates], index) => (
-                  <li className={index === 0 ? 'is-current' : ''} key={cycle} aria-current={index === 0 ? 'step' : undefined}>
+                  <li className={index === 1 ? 'is-current' : ''} key={cycle} aria-current={index === 1 ? 'step' : undefined}>
                     <div className="calendar-quarter-top"><span>{cycle}</span><span className="calendar-quarter-number" aria-hidden="true">0{index + 1}</span></div>
                     <strong>{dates}</strong>
                     <span className="calendar-quarter-marker" aria-hidden="true" />
-                    {index === 0 && <span className="sr-only">{t.awards.currentLabel}</span>}
+                    {index === 1 && <span className="sr-only">{t.awards.currentLabel}</span>}
                   </li>
                 ))}
               </ol>
