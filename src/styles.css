@@ -13,23 +13,23 @@
   --font-geist-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   --background: #f5f7fd;
   --foreground: #141b2d;
-  --primary: #e02f92;
+  --primary: #6c35d4;
   --primary-foreground: #ffffff;
   --muted: #e9edf7;
   --muted-foreground: #5f6783;
   --border: rgba(16, 24, 40, 0.09);
-  --ring: #e02f92;
+  --ring: #6c35d4;
 }
 
 :root[data-theme='dark'] {
-  --background: #080912;
+  --background: #090829;
   --foreground: #f5f7ff;
-  --primary: #ff3aa6;
+  --primary: #a778ff;
   --primary-foreground: #ffffff;
-  --muted: #181c2e;
+  --muted: #201949;
   --muted-foreground: #adb6d1;
   --border: rgba(255, 255, 255, 0.08);
-  --ring: #ff3aa6;
+  --ring: #a778ff;
 }
 
 * {
@@ -94,7 +94,7 @@ summary:focus-visible {
   --section-alt: rgba(255, 255, 255, 0.34);
   --text: #141b2d;
   --text-soft: #5f6783;
-  --primary: #e02f92;
+  --primary: #6c35d4;
   --primary-strong: #3f9dff;
   --primary-soft: rgba(224, 47, 146, 0.1);
   --glow-1: rgba(224, 47, 146, 0.14);
@@ -115,7 +115,7 @@ summary:focus-visible {
 
 .challenge-site[data-theme='dark'] {
   --shadow: 0 16px 42px rgba(0, 0, 0, 0.2);
-  --bg: #080912;
+  --bg: #090829;
   --bg-2: #0d1020;
   --panel: rgba(20, 24, 40, 0.88);
   --panel-strong: rgba(25, 31, 54, 0.95);
@@ -123,7 +123,7 @@ summary:focus-visible {
   --section-alt: rgba(255, 255, 255, 0.03);
   --text: #f5f7ff;
   --text-soft: #adb6d1;
-  --primary: #ff3aa6;
+  --primary: #a778ff;
   --primary-strong: #74d8ff;
   --primary-soft: rgba(255, 58, 166, 0.14);
   --glow-1: rgba(255, 58, 166, 0.18);
@@ -482,7 +482,7 @@ section {
   border: 1px solid rgba(154, 111, 255, 0.2);
   border-radius: var(--radius-hero);
   isolation: isolate;
-  background: #050620 url('/hero-rabbit-hackathon-v3.png') 50% 50% / cover no-repeat;
+  background: #050620 url('/hero-rabbit-november.jpg') right center / auto 100% no-repeat;
   box-shadow:
     0 24px 64px rgba(6, 8, 40, 0.34),
     0 0 0 1px rgba(154, 111, 255, 0.1);
@@ -2500,7 +2500,8 @@ footer {
     min-height: 530px;
     aspect-ratio: auto;
     border-radius: 22px;
-    background-position: 66% 50%;
+    background-position: center top;
+    background-size: cover;
   }
 
   .hero-banner::after {
