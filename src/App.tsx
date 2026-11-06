@@ -885,11 +885,11 @@ export default function Home() {
               </div>
               <ol className="calendar-quarters">
                 {t.awards.cycleDates[1].map(([cycle, dates], index) => (
-                  <li className={index === 0 ? 'is-current' : ''} key={cycle} aria-current={index === 0 ? 'step' : undefined}>
+                  <li className={index === 1 ? 'is-current' : ''} key={cycle} aria-current={index === 1 ? 'step' : undefined}>
                     <div className="calendar-quarter-top"><span>{cycle}</span><span className="calendar-quarter-number" aria-hidden="true">0{index + 1}</span></div>
                     <strong>{dates}</strong>
                     <span className="calendar-quarter-marker" aria-hidden="true" />
-                    {index === 0 && <span className="sr-only">{t.awards.currentLabel}</span>}
+                    {index === 1 && <span className="sr-only">{t.awards.currentLabel}</span>}
                   </li>
                 ))}
               </ol>

@@ -482,7 +482,7 @@ section {
   border: 1px solid rgba(154, 111, 255, 0.2);
   border-radius: var(--radius-hero);
   isolation: isolate;
-  background: #050620 url('/hero-rabbit-november.jpg') right center / auto 100% no-repeat;
+  background: #050620 url('/hero-rabbit-november.jpg') right center / cover no-repeat;
   box-shadow:
     0 24px 64px rgba(6, 8, 40, 0.34),
     0 0 0 1px rgba(154, 111, 255, 0.1);
@@ -508,7 +508,7 @@ section {
   pointer-events: none;
   content: '';
   background:
-    linear-gradient(90deg, rgba(3, 5, 24, 0.78) 0%, rgba(4, 7, 31, 0.48) 37%, transparent 58%),
+    linear-gradient(90deg, rgba(9, 8, 41, 0.87) 0%, rgba(13, 9, 53, 0.62) 32%, transparent 65%),
     linear-gradient(180deg, rgba(2, 4, 24, 0.08), transparent 22%, transparent 76%, rgba(3, 5, 24, 0.24));
 }
 
