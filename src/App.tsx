@@ -5,6 +5,7 @@ import {
   CodeXml,
   Info,
   Languages,
+  MapPin,
   Moon,
   Network,
   PackageOpen,
@@ -784,24 +785,15 @@ export default function Home() {
         <p className="registration-float-note">{t.qrFloat.note}</p>
       </aside>
 
-      <section className="content-section entry-section" id="entry-rules">
-        <div className="site-shell">
-          <div className="section-head">
-            <span className="section-eyebrow">{t.entryRules.eyebrow}</span>
-            <h2>{t.entryRules.title}</h2>
-          </div>
-          <div className="quarterly-logic-grid entry-rules-grid">
-            {t.entryRules.items.map(([number, title, description]) => (
-              <article key={number}>
-                <span>{number}</span>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <section className="content-section quarterly-announcement" id="quarterly-review"><div className="site-shell">
+<div className="section-head"><span className="section-eyebrow">季度赛 · 8—10月</span><h2>季度赛评选安排</h2><p>邀请一、二等奖候选项目选手于11月28日赴深圳，参加现场终评。</p></div>
+<div className="quarterly-flow" aria-label="季度赛评选流程">
+<article><div className="flow-icon"><CodeXml aria-hidden="true" /></div><span>11月18日 · 线上评选</span><h3>统一标准评审</h3><p>MoonBit 工程师评审<br />线上公布三等奖获奖项目</p></article>
+<article><div className="flow-icon"><Trophy aria-hidden="true" /></div><span>11月18日 · 候选公布</span><h3>邀请候选项目选手赴深圳</h3><p>公布一、二等奖候选项目<br />邀请选手于11月28日参加现场终评</p></article>
+<article><div className="flow-icon"><CodeXml aria-hidden="true" /></div><span>11月28日 · 深圳 · 上午</span><h3>MoonBit 1.0 技术分享</h3><p>MoonBit 黑客松（8—10月）<br />季度决赛现场</p></article>
+<article><div className="flow-icon"><Trophy aria-hidden="true" /></div><span>11月28日 · 深圳 · 下午</span><h3>现场决出一、二等奖</h3><div className="onsite-callout"><MapPin aria-hidden="true" /><strong>候选项目选手到场参与评选</strong></div><p>MoonBit 工程师与其他评委共同评审</p></article>
+</div>
+<div className="quarterly-score" id="quarterly-scoring"><div className="section-head"><span className="section-eyebrow">赛事章程 · 季度赛评分准则</span><h2>四项维度，每项25分</h2><p>总分100分，按一般、良好、优秀三个层次评估项目表现。点击下方各项展开评分细则。</p></div><details><summary><span>01　工程深度与实现强度</span><b className="score-action"><span>25分</span><span className="score-expand">展开 ＋</span><span className="score-collapse">收起 −</span></b></summary><div className="score-levels"><article><strong>一般</strong><p>题目立项或核心成果不成立，项目难以正常运行或者核心功能缺失，展示停留在局部原型或预设路径</p></article><article><strong>良好</strong><p>核心流程能够运行，主要功能基本具备，达到可用水平</p></article><article><strong>优秀</strong><p>核心成果完整且具有足够强度，关键场景得到验证，范围变化和未完成事项交代清楚，整体达到或超过预期</p></article></div></details><details><summary><span>02　技术贡献与攻关</span><b className="score-action"><span>25分</span><span className="score-expand">展开 ＋</span><span className="score-collapse">收起 −</span></b></summary><div className="score-levels"><article><strong>一般</strong><p>只能描述功能，从代码和文档难以理解关键实现；技术内容主要是常规拼装，偏向于对目标进行特殊判断</p></article><article><strong>良好</strong><p>方案合理，能解释关键选型、MoonBit 运用和实际解决的技术难点；移植项目能完整移植功能</p></article><article><strong>优秀</strong><p>解决了实质性难题，对约束、取舍和边界有深入掌握，并形成高质量的 MoonBit 原生设计或技术突破</p></article></div></details><details><summary><span>03　生态增量</span><b className="score-action"><span>25分</span><span className="score-expand">展开 ＋</span><span className="score-collapse">收起 −</span></b></summary><div className="score-levels"><article><strong>一般</strong><p>缺少外部基线，无法说明相对生态已有成熟方案增加了什么或场景过于专一从而难以复用</p></article><article><strong>良好</strong><p>填补了明确缺口，形成可用的新能力、合理改进或复用价值</p></article><article><strong>优秀</strong><p>通过数据、场景、采用或独立验证证明了显著改进，为 MoonBit 带来重要的新能力、平台适配或广泛复用价值</p></article></div></details><details><summary><span>04　开发与验证能力</span><b className="score-action"><span>25分</span><span className="score-expand">展开 ＋</span><span className="score-collapse">收起 −</span></b></summary><div className="score-levels"><article><strong>一般</strong><p>开发过程随意，主要依赖未经校验的 AI 结果</p></article><article><strong>良好</strong><p>代码规范，合理使用 MoonBit 工具链、测试和调试手段，能够验证核心结果并沉淀部分回归检查</p></article><article><strong>优秀</strong><p>形成稳定、可重复的任务拆解和验证闭环，综合使用 Harness、回归、基准、自动化及 AI 校验，并能展示其实际发现和防止错误的效果</p></article></div></details></div></div></section>
       <section className="content-section process-section" id="process">
         <div className="site-shell">
           <div className="section-head">
